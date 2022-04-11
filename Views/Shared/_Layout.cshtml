@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Legal Heroes Limited</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-light navbar-fixed-top" style="background-color: #e3f2fd;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Legal Heroes Limited", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+        <!-- Footer -->
+        <footer class="bg-primary text-white text-center">          
+            <!-- Grid container -->
+            <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                    <h5 class="text-uppercase"><strong>Contact us</strong></h5>
+                    </div>
+                <div class="row">
+                    <p><strong>Phone:</strong> 09 489 9102<br />
+                    <strong>email:</strong> <a style="color:white"href="legal_heroes_limited@gmail.com">legal_heroes_limited@gmail.comm</a><br />
+                    <strong>Address:</strong> 11 Anzac Street, Takapuna,Auckland 0622</p>
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2022 Copyright: Legal Heroes Limited
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+        
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
